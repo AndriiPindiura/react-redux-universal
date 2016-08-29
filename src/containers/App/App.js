@@ -14,6 +14,7 @@ import React, { Component, PropTypes } from 'react';
 // import config from 'config';
 // import { asyncConnect } from 'redux-connect';
 import styles from './App.scss';
+require('../../components/main.scss');
 // import cookie from 'js-cookie';
 
 // @asyncConnect([{

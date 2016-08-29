@@ -99,9 +99,9 @@ const socketHandler = io => {
 app.configure(hooks())
   .configure(rest())
   .configure(socketio({ path: '/ws' }, socketHandler))
-  .configure(authentication)
+  // .configure(authentication)
   .use(actionsHandler)
-  .configure(services)
+  // .configure(services)
   .configure(middleware);
 
 if (globalConfig.apiPort) {
