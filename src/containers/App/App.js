@@ -66,7 +66,6 @@ class App extends Component {
   // };
 
   render() {
-    console.log(this.props);
     return (
       <div className={styles.app}>
         {this.props.children}
@@ -83,8 +82,8 @@ App.propTypes = {
   children: PropTypes.object.isRequired,
   user: PropTypes.object,
   notifs: PropTypes.object,
-  logout: PropTypes.func.isRequired,
-  pushState: PropTypes.func.isRequired
+  // logout: PropTypes.func.isRequired,
+  // pushState: PropTypes.func.isRequired
 };
 
 export default App;

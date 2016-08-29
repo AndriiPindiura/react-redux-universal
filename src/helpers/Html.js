@@ -12,13 +12,7 @@ import Helmet from 'react-helmet';
  * HTML doctype declaration, which is added to the rendered output
  * by the server.js file.
  */
-export default class Html extends Component {
-  static propTypes = {
-    assets: PropTypes.object,
-    component: PropTypes.node,
-    store: PropTypes.object
-  };
-
+class Html extends Component {
   render() {
     const { assets, component, store } = this.props;
     const content = component ? ReactDOM.renderToString(component) : '';
@@ -63,3 +57,11 @@ export default class Html extends Component {
     );
   }
 }
+
+Html.propTypes = {
+  assets: PropTypes.object,
+  component: PropTypes.node,
+  store: PropTypes.object
+};
+
+export default Html;

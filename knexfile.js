@@ -3,12 +3,12 @@
 module.exports = {
 
   development: {
-    client: 'mysql',
-    connection: {
-      database: 'myapp_dev',
-      user:     'root',
-      password: 'grut'
-    },
+    // client: 'mysql',
+    // connection: {
+    //   database: 'myapp_dev',
+    //   user:     'root',
+    //   password: 'grut'
+    // },
     migrations: {
       tableName: 'migrations',
       directory: './api/database/migrations'
@@ -19,12 +19,12 @@ module.exports = {
   },
 
   production: {
-    client: 'mysql',
-    connection: {
-      database: 'myapp',
-      user:     'root',
-      password: 'grut'
-    },
+    // client: 'mysql',
+    // connection: {
+    //   database: 'myapp',
+    //   user:     'root',
+    //   password: 'grut'
+    // },
     migrations: {
       tableName: 'migrations',
       directory: './api/database/migrations'

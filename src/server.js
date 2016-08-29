@@ -22,12 +22,7 @@ mongoose.Promise = require('bluebird');
 import answerAPI from '../api/answer';
 import questionAPI from '../api/question';
 
-const mongo = {
-  uri: 'mongodb://localhost/bemy',
-};
-
-
-mongoose.connect(mongo.uri, { db: { safe: true } });
+mongoose.connect(config.mongo.uri, { db: { safe: true } });
 mongoose.connection.on('error', (e) => {
   console.log(e);
 });

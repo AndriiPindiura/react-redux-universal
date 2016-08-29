@@ -9,11 +9,19 @@ const environment = {
   }
 }[process.env.NODE_ENV || 'development'];
 
+// export const mongo = {
+//   uri: 'mongodb://localhost/bemy',
+// };
+
+
 module.exports = Object.assign({
   host: process.env.HOST || 'localhost',
   port: process.env.PORT,
   apiHost: process.env.APIHOST || 'localhost',
   apiPort: process.env.APIPORT,
+  mongo: {
+    uri: 'mongodb://localhost/bemy',
+  },
   app: {
     title: 'Bemy',
     description: 'Harmony.',
