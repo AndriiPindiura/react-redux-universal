@@ -1,22 +1,30 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 // import { Link } from 'react-router';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 // import Helmet from 'react-helmet';
 
-class Home extends Component {
-  render() {
-    // const styles = require('./Home.scss');
-    // require the logo image both from client and server
-    // const logoImage = require('./logo.png');
-    // console.log(this.props.bemy);
-    return (
-      <div>
-        <h1>hello react!</h1>
-      </div>
-    );
-  }
+function Home() {
+  return (
+    <div>
+      <h1>hello react!</h1>
+    </div>
+  );
 }
+
+// class Home extends Component {
+//   render() {
+//     // const styles = require('./Home.scss');
+//     // require the logo image both from client and server
+//     // const logoImage = require('./logo.png');
+//     // console.log(this.props.bemy);
+//     return (
+//       <div>
+//         <h1>hello react!</h1>
+//       </div>
+//     );
+//   }
+// }
 
 Home.propTypes = {
   bemy: PropTypes.object.isRequired,

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
+import styles from './App.scss';
 // import { connect } from 'react-redux';
 // import { IndexLink } from 'react-router';
 // import { LinkContainer } from 'react-router-bootstrap';
@@ -13,7 +14,6 @@ import React, { Component, PropTypes } from 'react';
 // import { push } from 'react-router-redux';
 // import config from 'config';
 // import { asyncConnect } from 'redux-connect';
-import styles from './App.scss';
 require('../../components/main.scss');
 // import cookie from 'js-cookie';
 
@@ -36,7 +36,7 @@ require('../../components/main.scss');
 //     user: state.auth.user
 //   }),
 //   { logout, pushState: push })
-class App extends Component {
+// class App extends Component {
   // static propTypes = {
   //   children: PropTypes.object.isRequired,
   //   user: PropTypes.object,
@@ -66,17 +66,25 @@ class App extends Component {
   //   this.props.logout();
   // };
 
-  render() {
-    return (
-      <div className={styles.app}>
-        {this.props.children}
-      </div>
+//   render() {
+//     return (
+//       <div className={styles.app}>
+//         {this.props.children}
+//       </div>
+//     );
+//   }
+// }
+
+function App(props) {
+  return (
+    <div className={styles.app}>
+      {props.children}
+    </div>
     );
-  }
 }
 
 App.contextTypes = {
-  store: PropTypes.object.isRequired
+  store: PropTypes.object.isRequired,
 };
 
 App.propTypes = {
